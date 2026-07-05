@@ -1,0 +1,15 @@
+body{
+    background-color: #6fdebc;
+}
+.red{
+    color: red;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+
+#seconddiv{
+    color: blue;
+}
+/* This is a comment */
+/* use . before class name and # before id name */

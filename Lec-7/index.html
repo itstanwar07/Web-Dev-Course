@@ -9,7 +9,7 @@
     <h1>Form to apply</h1>
     <div>
     <form action="post">
-        <label for="usename"></label>
+        <label for="username">Username:</label>
         <input type="text" id="username" placeholder="Enter your username">
     </div>
     <div>
@@ -28,12 +28,20 @@
         <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
     </div>
     <div>
-        <select name="fruits">
-            <options value ="apple">Apple</options>
-            <options value ="banana">Banana</options>
-            <options value ="orange">Orange</options>
+        <input type="checkbox" id="terms" name="terms" value="terms">
+        <label for="terms">Checkbox example 2 </label>
+    </div>
+    <div>
+        <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
         </select>
     </div>
     </form>
+    <div>
+        <h2>This was</h2>
+    </div>
 </body>
 </html>
