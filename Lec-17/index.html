@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Selecter</title>
+    <style>
+        /*  Element Selector  */
+        div{
+            background-color : red;
+        }
+        /* Class Selector  */
+        .red{
+            background-color : red;
+        }
+        /* Id Selector */
+        #green{
+            background-color : green;
+        }
+        /* Child Selector */
+        div > p{
+            background-color : yellow;
+        }
+        /* Descendent Selector*/
+        div p{
+            background-color : blue;
+        }
+        /* Universal Selector */
+        *{
+            background-color : pink;
+            margin : 9;
+            padding : 9;
+        }
+        /* Pseudo Selector */
+        a:hover{
+            background-color : rgb(45, 20, 172);
+        }
+
+        a:visited{
+            background-color : purple;
+        }
+
+        a:active{
+            background-color : brown;
+        }
+
+        a:link{
+            background-color : rgb(28, 159, 220);
+        }
+        p:first-child{
+            background-color : rgb(72, 220, 114);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="red">
+        i am a div
+        <p>i am a child of div</p>
+        <p>i am the second child</p>
+    </div>
+    <div id="green">
+        i am another div  
+        <p>i am another first child of different div</p> 
+    </div>
+    <span>
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://www.facebook.com/">Facebook</a>
+    </span>
+    <main>
+        <section>
+            <h1>CSS Selectors</h1>
+            <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+            <p>We can divide CSS selectors into five categories:</p>
+            <ul>
+                <li>Simple selectors (select elements based on name, id, class)</li>
+                <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+                <li>Pseudo-class selectors (select elements based on a certain state)</li>
+                <li>Pseudo-elements selectors (select and style a part of an element)</li>
+                <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+            </ul>
+
+        </section>
+        Other than the above mentioned selectors, there are also some other selectors like Grouping selectors, Negation selectors, etc. that can be used to select elements in a more specific way.
+    </main>
+    <footer>
+        The Code is the best way to learn and understand so refer to the code and try to understand it. You can also modify the code and see how it works.
+    </footer>
+</body>
+</html>
