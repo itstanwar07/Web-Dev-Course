@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity and Cascade</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: rgb(20, 50, 77);
+        }
+
+        /* The specificity of this selector is 10  */
+        .cpurple {
+            color: purple;
+        }
+
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x=a] {
+            color: maroon;
+        }
+
+        /* The specificity of this selector is 10  */
+        .cred {
+            color: red;
+        }
+
+        /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="yellow cred cpurple" data-x="a">i am header</h1>
+    <div>
+        <section>
+            <h1>Cascading Algorithim</h1>
+            <p>CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple
+                CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above
+                CSS will be purple.</p>
+            <p>Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this.
+                The cascade algorithm has 4 distinct stages.</p>
+            <ol>
+                <li>Position and order of appearance: the order in which your CSS rules appear</li>
+                <li>Specificity: an algorithm that determines which CSS selector has the strongest match (inline > ID >
+                    class > element > universal)</li>
+                <li>Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS
+                    from a browser extension, or your authored CSS</li>
+                <li>Importance: some CSS rules are weighted more heavily than others, especially with the !important
+                    rule type</li>
+            </ol>
+            <h2>Effect of Position</h2>
+            <p>If two rules have the same specificity, the last one declared wins. In an HTML page, you can add styles
+                in different ways: through a link tag, a style tag, or directly in the element's style attribute. If you
+                have one link tag at the top of your page and another at the bottom, the styles from the bottom one will
+                be used. The same goes for style tags; the ones lower down on the page take priority </p>
+            <h1>Specificity</h1>
+            <p>When you style a webpage, sometimes multiple CSS rules target the same element. So, which one wins?
+                That’s where CSS specificity comes in.</p>
+            <p>It’s basically a weight system that determines which rule has more power. The higher the specificity, the
+                stronger the rule — and the browser applies it. </p>
+            <h3>Inline Styles</h3>
+            <p>Inline styles have the highest specificity and will always override styles if other selector(s) are also
+                defined.</p>
+            <h3>ID Selector</h3>
+            <p>The ID selector also has high specificity but comes after the inline Style specificity. So, if we have an
+                ID and other selectors except the inline style, then the element will take the ID selector properties
+                and values.</p>
+            <h3>Class and Attribute Selectors</h3>
+            <p>Class selectors and attribute selectors have moderate specificity. Suppose the element has a class or
+                attribute selector and not an inline style or ID selector, then the element will take properties and
+                values from the class or attribute selector.</p>
+            <h3>Element Selector</h3>
+            <p>Element selectors like &lt;p&gt;:, &lt;div&gt;, &lt;a&gt;, etc. have low specificity.</p>
+            <h3>Universal Selector</h3>
+            <p>Universal selectors (*) and combining selectors like not, first-child, and last-child have the lowest
+                specificity.</p>
+            <h4> Specificity Hierarchy -</h4>
+            <p>Inline Style > ID Selector > Class/Attribute/Pseudo-class > Element Selector > Universal Selector</p>
+            <h3>Specificity Calculation</h3>
+            <p>
+                To calculate specificity, assign a value to each part of the selector:
+            <ul>
+                <li>Universal Selector: 0</li>
+                <li>Element selectors and pseudo-elements: 1</li>
+                <li>Class selectors, attribute selectors, and pseudo-classes: 10</li>
+                <li>ID selectors: 100</li>
+                <li>Inline styles: 1000</li>
+            </ul>
+            <p>Then, add up the values of all the parts in the selector.</p>
+            </p>
+            <h2>Importance</h2>
+            <p>The !important flag in CSS is used to give a particular style rule the highest level of importance,
+                overriding any other competing styles. When you add !important to a CSS rule, it will take precedence
+                over other rules affecting the same element, regardless of their specificity. For example, if you have:
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>
