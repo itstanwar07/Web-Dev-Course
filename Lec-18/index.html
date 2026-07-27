@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        .box{
+            background-color: aqua;
+            padding: 0;
+            margin: 0;
+        }
+        .box1{
+            color: red;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid black;
+            /* this heigt does not include the padding and the border size  */
+            height: 100px;
+            box-sizing: border-box;
+             /*after using the box-sizing: border-box is used to tell the height is given including the border and padding */
+        }
+        .box2{
+            color: yellow;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid blue;
+            height: 100px;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">i am a box</div>
+    <div class="box box2">i am another box</div>
+    <main>
+        <section>
+            <h1>We learned-</h1>
+            <h2>Box Model</h2>
+            <p> The Css BoxModel define how elements are rendered and how their dimensions are calculated. It describes the structure of an element as a rectangular box that has content, padding, a border, and a margin</p>
+            <h2>Components of Box Model</h2>
+            <ol>
+                <li>Content</li>
+                <ul>
+                    <li>The innermost component of the box model is the actual content of the element. It can be text, image, video, etc.</li>
+                    <li>The content area is defined by the width and height properties.</li>
+                </ul>
+                <li>Padding</li>
+                <ul>
+                    <li>The space between the actual content and the border of the element is the padding.</li>
+                    <li>The padding area is defined by the property padding.</li>
+                </ul>
+                <li>Border</li>
+                <ul>
+                    <li>The border surrounds the content and padding and gives the visual border of the element.</li>
+                    <li>The border properties can be controlled using the border keyword.</li>
+
+                </ul>
+                <li>Margin</li>
+                <ul>
+                    <li>The outermost component of the box model is the margin, which is the space between the element and its neighboring elements.</li>
+                    <li>The margin area is defined by the property margin.</li>
+                </ul>
+            </ol>
+            <h2>Virtual Representation</h2>
+            <img src="box model.png" alt="Box Model Representation" height="250px" width="400px">
+            <h2>Calculating Total Dimensions</h2>
+            <p>The total width and height of the element is calculated with the formula:</p>
+            <ul>
+                <li>Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin</li>
+                <li>Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin</li>
+            </ul>
+            <h3>Some tips</h3>
+            <p>You can explore the box model of any element using the browser’s Inspect Tool:</p>
+            <ol>
+                <li>Right-click and click on Inspect.</li>
+                <li>Click on the arrow key in the top left corner.</li>
+                <li>Select the element.</li>
+                <li>Unhide the computed styles sidebar.</li>
+                <li>Toggle the properties.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
